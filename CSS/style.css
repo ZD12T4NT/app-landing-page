@@ -507,17 +507,13 @@ section {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
 }
 
 .section-five .section-five-content {
   position: relative;
 }
 
-.section-five .section-five-content .screenshot img {
+.section-five .section-five-content .screenshot {
   z-index: 1;
 }
 
@@ -539,6 +535,12 @@ section {
   margin-bottom: 8rem;
 }
 
+@media only screen and (max-width: 900px) {
+  .section-five .title {
+    text-align: center;
+  }
+}
+
 .section-five .title h1 {
   text-transform: capitalize;
   font-size: 2.5rem;
@@ -558,11 +560,23 @@ section {
   overflow: hidden;
 }
 
+@media only screen and (max-width: 900px) {
+  .section-five .line-one {
+    display: none;
+  }
+}
+
 .section-five .line-two {
   position: absolute;
   bottom: -200px;
   right: 0;
   z-index: 0;
+}
+
+@media only screen and (max-width: 900px) {
+  .section-five .line-two {
+    display: none;
+  }
 }
 
 .section-six {
@@ -613,6 +627,12 @@ section {
   width: 800px;
 }
 
+@media only screen and (max-width: 900px) {
+  .section-six .title P {
+    width: 600px;
+  }
+}
+
 .section-six .section-six-container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -625,8 +645,23 @@ section {
           align-items: center;
 }
 
+@media only screen and (max-width: 900px) {
+  .section-six .section-six-container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
 .section-six .section-six-container img {
   margin: 0 3rem;
+}
+
+@media only screen and (max-width: 900px) {
+  .section-six .section-six-container img {
+    margin: 1rem 0;
+  }
 }
 
 .section-seven {
@@ -639,7 +674,18 @@ section {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  height: 100vh;
+  min-height: 100vh;
+}
+
+@media only screen and (max-width: 900px) {
+  .section-seven {
+    padding-top: 3rem;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    text-align: center;
+  }
 }
 
 .section-seven .section-seven-content:nth-of-type(1) {
@@ -669,6 +715,15 @@ section {
   margin-right: 1rem;
 }
 
+@media only screen and (max-width: 900px) {
+  .section-seven .section-seven-content .buttons {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
 .section-seven .section-seven-content .buttons .apple {
   padding: 10px 20px;
   cursor: pointer;
@@ -678,6 +733,12 @@ section {
   margin-right: 2rem;
   -webkit-transition: all .3s ease-in-out;
   transition: all .3s ease-in-out;
+}
+
+@media only screen and (max-width: 900px) {
+  .section-seven .section-seven-content .buttons .apple {
+    margin-bottom: 2.5rem;
+  }
 }
 
 .section-seven .section-seven-content .buttons .apple:hover {
@@ -724,6 +785,16 @@ section {
   height: 70vh;
 }
 
+@media only screen and (max-width: 900px) {
+  .newsletter {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    text-align: center;
+  }
+}
+
 .newsletter .news-content:nth-child(1) {
   width: 400px;
 }
@@ -739,6 +810,12 @@ section {
 .newsletter p {
   font-size: 1.9rem;
   margin: 2.5rem 0;
+}
+
+@media only screen and (max-width: 900px) {
+  .newsletter p {
+    margin-top: 0;
+  }
 }
 
 .newsletter .email {
@@ -772,6 +849,17 @@ section {
   overflow: hidden;
 }
 
+@media only screen and (max-width: 900px) {
+  .footer-container {
+    padding: 3rem 0;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    text-align: center;
+  }
+}
+
 .footer-container .footer-shape-one {
   position: absolute;
   right: -20rem;
@@ -782,12 +870,29 @@ section {
   position: absolute;
   left: -15rem;
   top: -10rem;
+  z-index: -1;
+}
+
+@media only screen and (max-width: 900px) {
+  .footer-container .footer-shape-two {
+    left: -22rem;
+  }
 }
 
 .footer-container .footer-content h3 {
   color: #2833B7;
   font-size: 2rem;
   text-transform: capitalize;
+}
+
+.footer-container .footer-content ul {
+  z-index: 1;
+}
+
+@media only screen and (max-width: 900px) {
+  .footer-container .footer-content ul {
+    margin: 2rem 0;
+  }
 }
 
 .footer-container .footer-content ul li {
