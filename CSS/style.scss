@@ -8,6 +8,7 @@
 
 body{
     font-family: Helvetica, sans-serif;
+    overflow-x: hidden;
 }
 
 ul{
@@ -24,6 +25,10 @@ a{
     margin: 0 auto;
     padding: 0;
     overflow: hidden;
+
+    @media only screen and (max-width: 900px) {
+        padding: 40px;
+    }
 }
 
 header{
@@ -48,6 +53,10 @@ header{
         display: flex;
         justify-content: center;
         align-items: center;
+
+        @media only screen and (max-width: 900px) {
+            display: none;
+        }
 
         ul{
             display: flex;
@@ -74,6 +83,10 @@ header{
         text-transform: uppercase;
         transition: all .2s ease-in-out;
 
+        @media only screen and (max-width: 900px) {
+            display: none;
+        }
+
         &:hover{
             background-color: #dbdbdb;
         }
@@ -92,6 +105,8 @@ header{
     position: absolute;
     right: 0;
     bottom: 0;
+
+    
 }
 
 
@@ -99,11 +114,24 @@ header{
     display: flex;
     justify-content: center;
 
+    @media only screen and (max-width: 900px) {
+        flex-direction: column;
+    }
+
    
     .hero-content{
         flex: 1;
         color: #f7f7f7;
         margin-top: 8rem;
+
+        &:nth-child(2){
+            display: flex;
+            justify-content: center;
+        }
+
+        @media only screen and (max-width: 900px) {
+            text-align: center;
+        }
 
 
        
@@ -176,13 +204,16 @@ section{
             height: 300px;
             padding: 1rem;
 
+            @media only screen and (max-width: 900px) {
+                text-align: center;
+            }
+
                         
 
             p{
             font-size: 1.3rem;
             margin:1.3rem 0 0 0;
             color:#8D8D8D;
-
             }
 
             .section-title{
@@ -208,6 +239,7 @@ section{
     align-items: center;
     flex-direction: column;
     position: relative;
+    border-top: 2px solid #000;
 
     .section-three-image{
         position: absolute;
